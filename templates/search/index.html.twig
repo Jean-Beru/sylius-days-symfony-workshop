@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Search{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    <h1>🔍 Search</h1>
+
+    {% if term is not empty %}
+        <p>
+            Results for "{{ term }}":
+        </p>
+        <p>
+            Not implemented yet.
+        </p>
+    {% else %}
+        <p>
+            Please give a term to search.
+        </p>
+    {% endif %}
+</div>
+{% endblock %}
