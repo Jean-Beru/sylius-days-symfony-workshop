@@ -39,4 +39,9 @@ php bin/console make:controller SearchController
 
 ### Bonus
 
-🎁 Bonus: Use the `MapRequestString` attribute with a Search DTO.
+🎁 Bonus: Use the `MapRequestString` attribute with a `App\Search\SearchContext` DTO.
+
+⚙️ Install the Serializer and Validator components:
+```bash
+composer require validator serializer
+```

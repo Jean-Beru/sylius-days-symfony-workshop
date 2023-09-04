@@ -3,20 +3,14 @@
 {% block title %}Search{% endblock %}
 
 {% block body %}
-<div class="example-wrapper">
+<div>
     <h1>🔍 Search</h1>
 
-    {% if term is not empty %}
-        <p>
-            Results for "{{ term }}":
-        </p>
-        <p>
-            Not implemented yet.
-        </p>
-    {% else %}
-        <p>
-            Please give a term to search.
-        </p>
-    {% endif %}
+    <p>
+        Results for "{{ searchContext.term }}" (page {{ searchContext.page }}):
+    </p>
+    <p>
+        Not implemented yet.
+    </p>
 </div>
 {% endblock %}
