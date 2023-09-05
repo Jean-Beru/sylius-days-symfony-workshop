@@ -81,3 +81,23 @@ use an interface to switch easily to the "database" version later.
 php bin/console doctrine:migration:diff
 php bin/console doctrine:migration:migrate
 ```
+
+
+## Building and extending forms
+
+### Install dependencies
+
+⚙️ Install Twig to render your templates:
+```bash
+composer require form
+```
+
+### Create and use your form
+
+📝 Create a new form, and then, a new controller to handle it.
+```bash
+php bin/console make:form Product # Remove "color" field for now
+php bin/console make:controller ProductController
+```
+
+📝 Edit your controller and template to display the form.

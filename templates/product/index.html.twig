@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product | Create{% endblock %}
+
+{% block body %}
+    {% for message in app.flashes('info') %}
+        <p><i>{{ message }}</i></p>
+    {% endfor %}
+
+    {{ form(form) }}
+{% endblock %}
