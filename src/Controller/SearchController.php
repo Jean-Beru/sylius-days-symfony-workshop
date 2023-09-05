@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Provider\DatabaseProductProvider;
+use App\Provider\FakeProductProvider;
 use App\Provider\ProviderInterface;
 use App\Search\SearchContext;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,7 +15,7 @@ class SearchController extends AbstractController
 {
     #[Route('/search', name: 'app_search')]
     public function index(
-        #[Autowire(service: DatabaseProductProvider::class)] ProviderInterface $productProvider,
+        #[Autowire(service: FakeProductProvider::class)] ProviderInterface $productProvider,
         #[MapQueryString] SearchContext $searchContext,
     ): Response
     {

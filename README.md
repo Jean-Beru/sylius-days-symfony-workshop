@@ -101,3 +101,11 @@ php bin/console make:controller ProductController
 ```
 
 📝 Edit your controller and template to display the form.
+
+
+## Creating entity using the Factory pattern
+
+### Create and use the factory
+
+📝 Create two services named `App\Factory\ProductFactory` and `App\Factory\ColorFactory` to return fake data and use it
+in the `App\Provider\FakeProvider`.
