@@ -109,3 +109,10 @@ php bin/console make:controller ProductController
 
 📝 Create two services named `App\Factory\ProductFactory` and `App\Factory\ColorFactory` to return fake data and use it
 in the `App\Provider\FakeProvider`.
+
+
+## Creating own and customizing vendor services through decoration
+
+### Create the decorator
+
+📝 Create a decorator for `App\Provider\FakeProductProvider` which adds a prefix to product names.
