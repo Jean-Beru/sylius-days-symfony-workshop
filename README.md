@@ -45,3 +45,39 @@ php bin/console make:controller SearchController
 ```bash
 composer require validator serializer
 ```
+
+
+## Working with Doctrine
+
+### Install dependencies
+
+⚙️ Install Doctrine:
+```bash
+composer require orm
+```
+
+📝 Update your `.env` to use SQLite or PostgreSQL (via Docker)
+```dotenv
+DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
+# or
+DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=15&charset=utf8"
+```
+
+### Create and use your entities
+
+📝 Create your entities:
+```bash
+php bin/console make:entity Color # name, code, reference 
+php bin/console make:entity Product # name, description, price, colors
+```
+
+📝 Create a `App\Provider\ProductProvider` service which will return mocked products and use it in your controller. Tip:
+use an interface to switch easily to the "database" version later.
+
+📝 Update this service to use the `App\Repository\ProductRepository`.
+
+⚙️ Create a migration and run it:
+```bash
+php bin/console doctrine:migration:diff
+php bin/console doctrine:migration:migrate
+```

@@ -10,7 +10,16 @@
         Results for "{{ searchContext.term }}" (page {{ searchContext.page }}):
     </p>
     <p>
-        Not implemented yet.
+        <ul>
+        {% for product in results %}
+            <li>
+                {{ product.name }}
+                <strong>{{ product.price/100 }}€</strong>
+            </li>
+        {% else %}
+            <li>No products found.</li>
+        {% endfor %}
+        </ul>
     </p>
 </div>
 {% endblock %}
